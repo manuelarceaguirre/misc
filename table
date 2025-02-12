@@ -1,94 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Project Risk Assessment</title>
-  <style>
-    /* (Paste the CSS code from above here) */
-    .risk-table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-bottom: 20px;
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-    }
-
-    .risk-table th, .risk-table td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-
-    .risk-table th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-    }
-
-    .risk-level-1 {
-      background-color: #d4edda; /* Light Green */
-      color: #155724; /* Dark Green */
-    }
-
-    .risk-level-2 {
-      background-color: #fff3cd; /* Light Yellow */
-      color: #856404; /* Dark Yellow */
-    }
-
-    .risk-level-3 {
-      background-color: #ffeeba; /* Light Orange */
-      color: #856404; /* Dark Orange */
-    }
-
-    .risk-level-4 {
-      background-color: #f8d7da; /* Light Red */
-      color: #721c24; /* Dark Red */
-    }
-
-    .risk-level-5 {
-      background-color: #dc3545; /* Strong Red */
-      color: white;
-    }
-
-    /* Hover effect for better usability */
-    .risk-table tr:hover {
-      background-color: #f5f5f5;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Project Risk Assessment</h1>
-
-  <table class="risk-table">
-    <thead>
-      <tr>
-        <th>Criteria</th>
-        <th>Score</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Complexity</td>
-        <td class="risk-level-{$Complexity_Risk}">{$Complexity_Risk}</td>
-        <td>Description of Risk based on Complexity Score</td>
-      </tr>
-      <tr>
-        <td>Resources</td>
-        <td class="risk-level-{$Resource_Risk}">{$Resource_Risk}</td>
-        <td>Description of Risk based on Resources Score</td>
-      </tr>
-      <tr>
-        <td>Timeline</td>
-        <td class="risk-level-{$Timeline_Risk}">{$Timeline_Risk}</td>
-        <td>Description of Risk based on Timeline Score</td>
-      </tr>
-      <tr>
-        <td>Overall Risk</td>
-        <td class="risk-level-{$Total_Risk}">{$Total_Risk}</td>
-        <td>Overall risk assessment for the project.</td>
-      </tr>
-    </tbody>
-  </table>
-
-</body>
-</html>
+"<table style='border-collapse: collapse; width: 100%;'>" &
+"<thead>" &
+"<tr>" &
+"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Risk Level</th>" &
+"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Description</th>" &
+"</tr>" &
+"</thead>" &
+"<tbody>" &
+If([Risk_Score] = 1,
+"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>1 - Critical Issues</td><td style='border: 1px solid #ddd; padding: 8px;'>Automatic rejection</td></tr>",
+"") &
+If([Risk_Score] = 2,
+"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>2 - Major Concerns</td><td style='border: 1px solid #ddd; padding: 8px;'>Needs significant revision</td></tr>",
+"") &
+If([Risk_Score] = 3,
+"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>3 - Acceptable with minor fixes</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
+"") &
+If([Risk_Score] = 4,
+"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>4 - Meets requirements well</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
+"") &
+If([Risk_Score] = 5,
+"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>5 - Exceeds requirements</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
+"") &
+"</tbody>" &
+"</table>"
