@@ -1,25 +1,68 @@
 "<table style='border-collapse: collapse; width: 100%;'>" &
 "<thead>" &
 "<tr>" &
-"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Risk Level</th>" &
-"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Description</th>" &
+"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Group</th>" &
+"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Score</th>" &
+"<th style='border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;'>Decision</th>" &
 "</tr>" &
 "</thead>" &
 "<tbody>" &
-If([Risk_Score] = 1,
-"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>1 - Critical Issues</td><td style='border: 1px solid #ddd; padding: 8px;'>Automatic rejection</td></tr>",
+
+// Architecture
+If(Not IsNullOrBlank([Architecture Score Value]),
+"<tr><td style='border: 1px solid #ddd; padding: 8px;'>Architecture</td>" &
+"<td style='border: 1px solid #ddd; padding: 8px;'>" & [Architecture Score Value] & "</td>" &
+If([Architecture Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
+If([Architecture Score Value] = 2, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>Major concerns - Needs significant revision</td>",
+If([Architecture Score Value] = 3, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>Acceptable with minor fixes</td>",
+If([Architecture Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>Meets requirements well</td>",
+If([Architecture Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
+"<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
+))))) &
+"</tr>",
 "") &
-If([Risk_Score] = 2,
-"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>2 - Major Concerns</td><td style='border: 1px solid #ddd; padding: 8px;'>Needs significant revision</td></tr>",
+
+// Legal/Privacy
+If(Not IsNullOrBlank([Legal/Privacy Score Value]),
+"<tr><td style='border: 1px solid #ddd; padding: 8px;'>Legal/Privacy</td>" &
+"<td style='border: 1px solid #ddd; padding: 8px;'>" & [Legal/Privacy Score Value] & "</td>" &
+If([Legal/Privacy Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
+If([Legal/Privacy Score Value] = 2, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>Major concerns - Needs significant revision</td>",
+If([Legal/Privacy Score Value] = 3, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>Acceptable with minor fixes</td>",
+If([Legal/Privacy Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>Meets requirements well</td>",
+If([Legal/Privacy Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
+"<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
+))))) &
+"</tr>",
 "") &
-If([Risk_Score] = 3,
-"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>3 - Acceptable with minor fixes</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
+
+// MLOps
+If(Not IsNullOrBlank([MLOps Score Value]),
+"<tr><td style='border: 1px solid #ddd; padding: 8px;'>MLOps</td>" &
+"<td style='border: 1px solid #ddd; padding: 8px;'>" & [MLOps Score Value] & "</td>" &
+If([MLOps Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
+If([MLOps Score Value] = 2, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>Major concerns - Needs significant revision</td>",
+If([MLOps Score Value] = 3, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>Acceptable with minor fixes</td>",
+If([MLOps Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>Meets requirements well</td>",
+If([MLOps Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
+"<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
+))))) &
+"</tr>",
 "") &
-If([Risk_Score] = 4,
-"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>4 - Meets requirements well</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
+
+// FISO
+If(Not IsNullOrBlank([FISO Score Value]),
+"<tr><td style='border: 1px solid #ddd; padding: 8px;'>FISO</td>" &
+"<td style='border: 1px solid #ddd; padding: 8px;'>" & [FISO Score Value] & "</td>" &
+If([FISO Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
+If([FISO Score Value] = 2, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #f8d7da; color: #721c24;'>Major concerns - Needs significant revision</td>",
+If([FISO Score Value] = 3, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #ffeeba; color: #856404;'>Acceptable with minor fixes</td>",
+If([FISO Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #fff3cd; color: #856404;'>Meets requirements well</td>",
+If([FISO Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
+"<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
+))))) &
+"</tr>",
 "") &
-If([Risk_Score] = 5,
-"<tr><td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>5 - Exceeds requirements</td><td style='border: 1px solid #ddd; padding: 8px;'></td></tr>",
-"") &
+
 "</tbody>" &
 "</table>"
