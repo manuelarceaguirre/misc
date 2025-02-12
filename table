@@ -1,84 +1,94 @@
-<style>
-  /* Basic Table Styling */
-  .risk-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-  }
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Risk Assessment</title>
+  <style>
+    /* (Paste the CSS code from above here) */
+    .risk-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
 
-  .risk-table th, .risk-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
+    .risk-table th, .risk-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
 
-  .risk-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
+    .risk-table th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
 
-  /* Specific Risk Level Styles - Change these to your preference */
-  .risk-level-1 {
-    background-color: #d4edda; /* Light Green */
-    color: #155724; /* Dark Green */
-  }
+    .risk-level-1 {
+      background-color: #d4edda; /* Light Green */
+      color: #155724; /* Dark Green */
+    }
 
-  .risk-level-2 {
-    background-color: #fff3cd; /* Light Yellow */
-    color: #856404; /* Dark Yellow */
-  }
+    .risk-level-2 {
+      background-color: #fff3cd; /* Light Yellow */
+      color: #856404; /* Dark Yellow */
+    }
 
-  .risk-level-3 {
-    background-color: #ffeeba; /* Light Orange */
-    color: #856404; /* Dark Orange */
-  }
+    .risk-level-3 {
+      background-color: #ffeeba; /* Light Orange */
+      color: #856404; /* Dark Orange */
+    }
 
-  .risk-level-4 {
-    background-color: #f8d7da; /* Light Red */
-    color: #721c24; /* Dark Red */
-  }
+    .risk-level-4 {
+      background-color: #f8d7da; /* Light Red */
+      color: #721c24; /* Dark Red */
+    }
 
-  .risk-level-5 {
-    background-color: #dc3545; /* Strong Red */
-    color: white;
-  }
+    .risk-level-5 {
+      background-color: #dc3545; /* Strong Red */
+      color: white;
+    }
 
-  /* Hover effect for better usability */
-  .risk-table tr:hover {
-    background-color: #f5f5f5;
-  }
-</style>
+    /* Hover effect for better usability */
+    .risk-table tr:hover {
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
 
-<table class="risk-table">
-  <thead>
-    <tr>
-      <th>Criteria</th>
-      <th>Score</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Criterion A</td>
-      <td class="risk-level-{$ScoreA}">{$ScoreA}</td>
-      <td>Description of Risk for Criterion A</td>
-    </tr>
-    <tr>
-      <td>Criterion B</td>
-      <td class="risk-level-{$ScoreB}">{$ScoreB}</td>
-      <td>Description of Risk for Criterion B</td>
-    </tr>
-    <tr>
-      <td>Criterion C</td>
-      <td class="risk-level-{$ScoreC}">{$ScoreC}</td>
-      <td>Description of Risk for Criterion C</td>
-    </tr>
-    <tr>
-      <td>Overall Risk</td>
-      <td class="risk-level-{$OverallScore}">{$OverallScore}</td>
-      <td>Description of Overall Risk</td>
-    </tr>
-  </tbody>
-</table>
+  <h1>Project Risk Assessment</h1>
+
+  <table class="risk-table">
+    <thead>
+      <tr>
+        <th>Criteria</th>
+        <th>Score</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Complexity</td>
+        <td class="risk-level-{$Complexity_Risk}">{$Complexity_Risk}</td>
+        <td>Description of Risk based on Complexity Score</td>
+      </tr>
+      <tr>
+        <td>Resources</td>
+        <td class="risk-level-{$Resource_Risk}">{$Resource_Risk}</td>
+        <td>Description of Risk based on Resources Score</td>
+      </tr>
+      <tr>
+        <td>Timeline</td>
+        <td class="risk-level-{$Timeline_Risk}">{$Timeline_Risk}</td>
+        <td>Description of Risk based on Timeline Score</td>
+      </tr>
+      <tr>
+        <td>Overall Risk</td>
+        <td class="risk-level-{$Total_Risk}">{$Total_Risk}</td>
+        <td>Overall risk assessment for the project.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
