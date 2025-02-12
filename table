@@ -9,7 +9,6 @@
 "<tbody>" &
 
 // Architecture
-If(Not IsNullOrBlank([Architecture Score Value]),
 "<tr><td style='border: 1px solid #ddd; padding: 8px;'>Architecture</td>" &
 "<td style='border: 1px solid #ddd; padding: 8px;'>" & [Architecture Score Value] & "</td>" &
 If([Architecture Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
@@ -19,11 +18,9 @@ If([Architecture Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 
 If([Architecture Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
 "<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
 ))))) &
-"</tr>",
-"") &
+"</tr>" &
 
 // Legal/Privacy
-If(Not IsNullOrBlank([Legal/Privacy Score Value]),
 "<tr><td style='border: 1px solid #ddd; padding: 8px;'>Legal/Privacy</td>" &
 "<td style='border: 1px solid #ddd; padding: 8px;'>" & [Legal/Privacy Score Value] & "</td>" &
 If([Legal/Privacy Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
@@ -33,11 +30,9 @@ If([Legal/Privacy Score Value] = 4, "<td style='border: 1px solid #ddd; padding:
 If([Legal/Privacy Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
 "<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
 ))))) &
-"</tr>",
-"") &
+"</tr>" &
 
 // MLOps
-If(Not IsNullOrBlank([MLOps Score Value]),
 "<tr><td style='border: 1px solid #ddd; padding: 8px;'>MLOps</td>" &
 "<td style='border: 1px solid #ddd; padding: 8px;'>" & [MLOps Score Value] & "</td>" &
 If([MLOps Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
@@ -47,11 +42,9 @@ If([MLOps Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; ba
 If([MLOps Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
 "<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
 ))))) &
-"</tr>",
-"") &
+"</tr>" &
 
 // FISO
-If(Not IsNullOrBlank([FISO Score Value]),
 "<tr><td style='border: 1px solid #ddd; padding: 8px;'>FISO</td>" &
 "<td style='border: 1px solid #ddd; padding: 8px;'>" & [FISO Score Value] & "</td>" &
 If([FISO Score Value] = 1, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #dc3545; color: white;'>Critical issues - Automatic rejection</td>",
@@ -61,8 +54,7 @@ If([FISO Score Value] = 4, "<td style='border: 1px solid #ddd; padding: 8px; bac
 If([FISO Score Value] = 5, "<td style='border: 1px solid #ddd; padding: 8px; background-color: #d4edda; color: #155724;'>Exceeds requirements</td>",
 "<td style='border: 1px solid #ddd; padding: 8px;'>Unknown</td>" // Default case
 ))))) &
-"</tr>",
-"") &
+"</tr>" &
 
 "</tbody>" &
 "</table>"
