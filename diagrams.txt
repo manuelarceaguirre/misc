@@ -63,37 +63,44 @@ graph TD;
 ----------------------------------------------------------
 
 
-mindmap
-  root((Model Review Cheat Sheet))
-    General Models
-      Quickbase("Must be filed in Quickbase")
-      Purpose("Define purpose & use case")
-      External("Uses external data?")
-      HighRisk("High-risk classification")
-    ECDIS Compliance
-      Tag("Tag as ECDIS in Quickbase")
-      Outputs("Document model outputs")
-      Testing("Pre-deployment testing")
-      Monitoring("Ongoing monitoring plan")
-      Bias("Bias evaluation")
-      Report("Submit compliance report")
-    High-Risk Validation
-      Assumptions("List assumptions & limitations")
-      DataQuality("Data quality assessment")
-      BiasTesting("Bias testing & benchmarking")
-      Sensitivity("Sensitivity & stress testing")
-      Performance("Ongoing performance monitoring")
-      ChangeMgmt("Change management plan")
-    Tools & Best Practices
-      Documentation("Jupyter, Confluence, Model Cards")
-      BiasTools("Fairlearn, AIF360, SHAP")
-      DataQualityTools("Great Expectations")
-      PerformanceTools("EvidentlyAI, WhyLabs")
-      StressTesting("LIME, SHAP")
-      Versioning("MLflow, DVC")
-    Common Pitfalls
-      NotFiled("Not filing model in Quickbase")
-      MissingBias("Missing bias evaluation")
-      NoMonitoring("No ongoing monitoring plan")
+graph TD;
+    A[Model Review Cheat Sheet]
+    
+    A --> B[General Models]
+    B --> B1[• File in Quickbase]
+    B --> B2[• Define purpose & use case]
+    B --> B3[• Check for external data usage]
+    B --> B4[• Determine high-risk classification]
+    
+    A --> C[ECDIS Compliance]
+    C --> C1[• Tag as ECDIS in Quickbase]
+    C --> C2[• Document model outputs]
+    C --> C3[• Pre-deployment testing details]
+    C --> C4[• Ongoing monitoring plan]
+    C --> C5[• Bias evaluation]
+    C --> C6[• Submit compliance report]
+    
+    A --> D[High-Risk Validation]
+    D --> D1[• List assumptions & limitations]
+    D --> D2[• Data quality assessment]
+    D --> D3[• Bias testing & benchmarking]
+    D --> D4[• Sensitivity & stress testing]
+    D --> D5[• Ongoing performance monitoring]
+    D --> D6[• Change management plan]
+    
+    A --> E[Tools & Best Practices]
+    E --> E1[• Documentation: Jupyter, Confluence, Model Cards]
+    E --> E2[• Bias: Fairlearn, AIF360, SHAP]
+    E --> E3[• Data Quality: Great Expectations]
+    E --> E4[• Performance Monitoring: EvidentlyAI, WhyLabs]
+    E --> E5[• Stress Testing: LIME, SHAP]
+    E --> E6[• Versioning: MLflow, DVC]
+    
+    A --> F[Common Pitfalls]
+    F --> F1[• Not filing in Quickbase]
+    F --> F2[• Missing bias evaluation]
+    F --> F3[• Lack of ongoing monitoring]
+    F --> F4[• Ignoring assumptions & limitations]
+
       IgnoredAssumptions("Ignored assumptions/limitations")
 
