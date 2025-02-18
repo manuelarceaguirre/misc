@@ -104,3 +104,29 @@ graph TD;
 
       IgnoredAssumptions("Ignored assumptions/limitations")
 
+------------------------------------------------
+
+Model Review Cheat Sheet
+ECDIS Compliance
+Tag as ECDIS in Quickbase
+Document model outputs
+Pre-deployment testing details
+Ongoing monitoring plan
+Bias evaluation
+Submit compliance report
+High-Risk Validation
+List assumptions & limitations
+Data quality assessment
+Bias testing & benchmarking
+Sensitivity & stress testing
+Ongoing performance monitoring
+Change management plan
+Tools & Best Practices
+Documentation: Jupyter, Confluence, Model Cards
+Bias: Fairlearn, AIF360, SHAP
+Data Quality: Great Expectations
+Performance Monitoring: EvidentlyAI, WhyLabs
+Stress Testing: LIME, SHAP
+Versioning: MLflow, DVC
+
+
