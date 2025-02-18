@@ -1,0 +1,60 @@
+graph TD;
+    A[New or Updated Model] -->|Does it use external data?| B{ECDIS Compliance?}
+    B -- Yes --> C[Tag Model as ECDIS in Quickbase]
+    B -- No --> D{High-Risk Assessment?}
+
+    D -- Meets Criteria --> E[Tag Model as High-Risk in Quickbase]
+    D -- Does Not Meet --> F[Proceed with Standard Monitoring]
+
+    E --> G[Perform Independent Validation]
+    G --> H[List Assumptions & Limitations]
+    G --> I[Conduct Data Quality Assessment]
+    G --> J[Perform Bias Testing & Benchmarking]
+    G --> K[Run Sensitivity & Stress Testing]
+    G --> L[Establish Ongoing Performance Monitoring]
+    G --> M[Develop Change Management Plan]
+
+    C & F --> N[Regular Model Monitoring]
+    M & L --> N
+    N --> O[Update Quickbase Records]
+
+    style C fill:#e0f7fa,stroke:#006064,stroke-width:2px
+    style E fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style N fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+
+
+----------------------------------------------------
+
+graph TD;
+    A[High-Risk Model] --> B[List Assumptions & Limitations]
+    A --> C[Conduct Data Quality Assessment]
+    A --> D[Perform Bias Testing & Benchmarking]
+    A --> E[Run Sensitivity & Stress Testing]
+    A --> F[Establish Ongoing Performance Monitoring]
+    A --> G[Develop Change Management Plan]
+    A --> H[Implement Bias & Stress Testing Policies]
+    
+    subgraph Independent Validation Requirements
+        B; C; D; E; F; G; H
+    end
+    
+    H --> I[Submit Documentation to Quickbase]
+    F --> I
+    G --> I
+
+
+--------------------------------------------------------
+
+
+graph TD;
+    A[Model Uses External Data] -->|Yes| B[Tag as ECDIS in Quickbase]
+    B --> C[Document Model Outputs]
+    B --> D[Describe Pre-Deployment Testing]
+    B --> E[Create Ongoing Monitoring Plan]
+    B --> F[Conduct Bias Evaluation]
+    
+    subgraph ECDIS Compliance Deliverables
+        C; D; E; F
+    end
+
+    F --> G[Submit Compliance Report]
