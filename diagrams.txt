@@ -58,3 +58,42 @@ graph TD;
     end
 
     F --> G[Submit Compliance Report]
+
+
+----------------------------------------------------------
+
+
+mindmap
+  root((Model Review Cheat Sheet))
+    General Models
+      Quickbase("Must be filed in Quickbase")
+      Purpose("Define purpose & use case")
+      External("Uses external data?")
+      HighRisk("High-risk classification")
+    ECDIS Compliance
+      Tag("Tag as ECDIS in Quickbase")
+      Outputs("Document model outputs")
+      Testing("Pre-deployment testing")
+      Monitoring("Ongoing monitoring plan")
+      Bias("Bias evaluation")
+      Report("Submit compliance report")
+    High-Risk Validation
+      Assumptions("List assumptions & limitations")
+      DataQuality("Data quality assessment")
+      BiasTesting("Bias testing & benchmarking")
+      Sensitivity("Sensitivity & stress testing")
+      Performance("Ongoing performance monitoring")
+      ChangeMgmt("Change management plan")
+    Tools & Best Practices
+      Documentation("Jupyter, Confluence, Model Cards")
+      BiasTools("Fairlearn, AIF360, SHAP")
+      DataQualityTools("Great Expectations")
+      PerformanceTools("EvidentlyAI, WhyLabs")
+      StressTesting("LIME, SHAP")
+      Versioning("MLflow, DVC")
+    Common Pitfalls
+      NotFiled("Not filing model in Quickbase")
+      MissingBias("Missing bias evaluation")
+      NoMonitoring("No ongoing monitoring plan")
+      IgnoredAssumptions("Ignored assumptions/limitations")
+
