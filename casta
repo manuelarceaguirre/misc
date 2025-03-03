@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Documentation for Leveraging Zendesk AI Agents Project}
+\author{Documentation Specialist}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Model Executive Summary}
+
+The Zendesk AI Agents project, initiated by the New Ventures business unit, aims to enhance customer self-service and reduce customer contacts by implementing AI-powered agents. These agents provide relevant instructions directly to customers using public knowledge articles from the Zendesk help center. The project targets customers of Toggle, Farmers Direct brands, and Toyota Auto Insurance (Embedded Partner) who interact via the web widget on available websites.
+
+The business purpose is to decrease customer contact volume by enabling AI agents to deliver immediate, accurate responses, thereby improving customer satisfaction and yielding annual savings of \$210,300 through reduced full-time equivalent (FTE) requirements. The model integrates with the Zendesk platform and relies on the availability of up-to-date public knowledge articles. It employs the GPT-4o model from OpenAI to generate context-aware responses.
+
+Governance is managed by the New Ventures team, with Jonathan Groves and Steve Kim as primary contacts and Vanessa Jackson as the business sponsor. The project aligns with the broader customer support ecosystem, enhancing efficiency through increased first-contact resolution rates and higher deflection to lower-cost, non-phone channels. The significant methodology involves generative AI, specifically GPT-4o, which supports features like summarization, expansion, and tone adjustment for clear and concise responses.
+
+Relevant documentation includes internal references on Zendesk AI integration and GPT-4o specifications, though specific titles are not provided here. As a new implementation targeting a start date of January 1, 2025, there is no model change history at this time.
+
+\section{Model Inventory}
+
+\begin{itemize}
+    \item \textbf{Model Name:} Zendesk AI Agents
+    \item \textbf{Risk Rating:} Not specified in provided documents
+    \item \textbf{Model Type:} AI-powered customer support system utilizing generative AI
+    \item \textbf{In-Scope Business Lines:} New Ventures, including Toggle, Farmers Direct, and Toyota Auto Insurance (Embedded Partner)
+    \item \textbf{Date of Creation:} Scheduled for implementation on January 1, 2025
+    \item \textbf{Model Version Number:} Not specified; assumed initial version (e.g., 1.0)
+    \item \textbf{Summary of Model Functionality and Usage:} The model deploys AI agents within web widget messaging channels to generate responses from public knowledge articles, reducing customer contacts and enhancing self-service.
+    \item \textbf{Model Environment and References:} Operates within the Zendesk platform, integrated with web widget messaging channels. References include Zendesk AI integration documentation and GPT-4o specifications.
+    \item \textbf{Ownership, Maintenance, and Usage:}
+    \begin{itemize}
+        \item \textbf{Owner:} New Ventures business unit
+        \item \textbf{Maintenance:} Not specified in provided documents
+        \item \textbf{Users:} Customers of Toggle, Farmers Direct, and Toyota Auto Insurance via web widget
+    \end{itemize}
+    \item \textbf{Third-Party Involvement:} Zendesk (platform provider) and OpenAI (GPT-4o model supplier)
+\end{itemize}
+
+\section{Model Inputs}
+
+The Zendesk AI Agents model uses text data from public knowledge articles in the Zendesk help center as its primary input, serving as the knowledge base for response generation.
+
+\begin{itemize}
+    \item \textbf{Data Input Variables and Sources:} Text from public knowledge articles maintained in the Zendesk help center.
+    \item \textbf{Overview of Data Quality:} Assumed to be accurate and up-to-date for public use, but specific metrics (accuracy, completeness, consistency, timeliness, availability, appropriateness) are not provided.
+    \item \textbf{Personal Information:} Public knowledge articles do not contain personal or Sensitive Personal Information. Customer queries may include personal data, but the model does not store or process it beyond response generation.
+    \item \textbf{Data Cleansing, Pre-processing, and Transformations:} Not detailed in provided documents.
+    \item \textbf{Assumptions about Input Variables:} Assumes articles are relevant and comprehensive for common queries; no trending or adjustment details provided.
+    \item \textbf{Data Creation Date and Dataset Splits:} Not applicable; no traditional training/test/validation splits specified.
+\end{itemize}
+
+\section{Model Calculations}
+
+The model leverages the GPT-4o generative AI model to produce responses based on public knowledge articles.
+
+\begin{itemize}
+    \item \textbf{Algorithms Used:} Utilizes GPT-4o’s transformer-based architecture with self-attention mechanisms, pre-trained and adapted for context-aware response generation.
+    \item \textbf{Model Logic Derivation:} Logic stems from GPT-4o’s training, enabling it to interpret queries and generate responses from the knowledge base.
+    \item \textbf{Key Parameters and Assumptions:} Specific parameters (e.g., prompts, temperature settings) are not detailed; assumes configuration prioritizes accuracy and relevance.
+\end{itemize}
+
+\section{Model Outputs}
+
+The model generates text responses to customer queries, delivered via web widget messaging channels.
+
+\begin{itemize}
+    \item \textbf{Types of Metrics or Scores Produced:} Outputs are text responses; associated metrics may include deflection rates, customer satisfaction, and first-contact resolution rates.
+    \item \textbf{Reporting of Model Results:} Responses are delivered to customers; performance is monitored via Zendesk dashboards and analytics tools.
+    \item \textbf{Integration into Business Processes:} Supports customer support workflow, reducing human agent involvement and operational costs.
+    \item \textbf{Relevant Metrics or Thresholds:} Not specified; key indicators may include response accuracy and resolution rates.
+    \item \textbf{Summary of Performance:} Expected to increase deflection to lower-cost channels and first-contact resolution, contributing to \$210,300 annual savings.
+\end{itemize}
+
+\section{Model Validation}
+
+Validation ensures the accuracy and effectiveness of AI-generated responses.
+
+\begin{itemize}
+    \item \textbf{Validation Procedures:} Zendesk QA reviews 100\% of AI interactions; specific techniques not detailed.
+    \item \textbf{Performance Benchmarking:} Likely assessed against customer satisfaction and resolution rates; no specific benchmarks provided.
+    \item \textbf{Customer Feedback:} Used to refine model accuracy and personalization.
+    \item \textbf{Frequency of Testing:} Not specified; ongoing via QA and feedback.
+    \item \textbf{Utilization of Validation Results:} Feedback drives iterative improvements.
+    \item \textbf{Model Monitoring:} Conducted via Zendesk dashboards and analytics.
+    \item \textbf{Governance and Parameter Updates:} Not detailed in provided documents.
+\end{itemize}
+
+\section{Model Life Cycle}
+
+\begin{itemize}
+    \item \textbf{Implementation Processes:} Involves integration with Zendesk platform and knowledge base; specific mitigation processes not detailed.
+    \item \textbf{Change Management:} Not specified in provided documents.
+    \item \textbf{Decommissioning:} Would align with Zendesk’s data retention policies; specifics not provided.
+\end{itemize}
+
+\section{Model Governance and Controls}
+
+\begin{itemize}
+    \item \textbf{Roles and Responsibilities:} Owned by New Ventures (Jonathan Groves, Steve Kim; sponsor: Vanessa Jackson); oversight possibly by Generative AI Council.
+    \item \textbf{Version Control and Change Management:} Not detailed in provided documents.
+    \item \textbf{Security and Compliance:} Secured via MFA login and Zendesk’s Advanced Data and Privacy Protection standards.
+\end{itemize}
+
+\section{Conclusion}
+
+The Zendesk AI Agents project enhances customer self-service, reducing contacts and achieving \$210,300 in annual savings. Its reliance on public knowledge articles limits effectiveness to their quality and scope. Future improvements could expand the knowledge base or refine AI capabilities.
+
+\section{Missing Elements}
+
+The following required elements are missing from the provided documents (quote: "MISSING"):
+
+\begin{itemize}
+    \item Risk rating of the model ("MISSING").
+    \item Maintenance team details ("MISSING").
+    \item Data quality metrics (accuracy, completeness, etc.) ("MISSING").
+    \item Data cleansing, pre-processing, and transformation locations/methods ("MISSING").
+    \item Detailed validation procedures, including in-sample/out-of-sample performance ("MISSING").
+    \item Frequency and specific validation techniques ("MISSING").
+    \item Change management processes (scope, cadence, tools, controls) ("MISSING").
+    \item Decommissioning procedures ("MISSING").
+    \item Governance roles beyond ownership ("MISSING").
+    \item Version control and change management documentation ("MISSING").
+\end{itemize}
+
+These gaps should be addressed for complete documentation per Farmers’ requirements.
+
+\section{Appendices}
+
+No supplementary materials provided; additional documentation may be included as needed.
+
+\end{document}
