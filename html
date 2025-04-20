@@ -1,78 +1,66 @@
-<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-  <thead style="background-color: #f2f2f2;">
-    <tr>
-      <th>Lifecycle Stage</th>
-      <th>Description</th>
-      <th>Model Owner Guidance</th>
-      <th>Required Dates</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Planned (within next 6 months)</strong></td>
-      <td>Model is expected to be developed and/or implemented in production within the next 6 months.</td>
-      <td>Use this if you have funding and intent, but the model is not yet operational. Useful for pipeline tracking.</td>
-      <td>No dates required.</td>
-    </tr>
-    <tr>
-      <td><strong>Implemented in Production</strong></td>
-      <td>The model is actively used in business operations and influences decision-making or outputs.</td>
-      <td>Select this only if the model is currently running and used in production workflows or systems.</td>
-      <td>
-        <ul style="margin: 0; padding-left: 20px;">
-          <li><strong>Production Deployment Date:</strong> Required</li>
-          <li><strong>Expiration Date:</strong> Required (default: 2 years from deployment)</li>
-          <li>Max duration: 2 years</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Proof-of-Concept (PoC)</strong></td>
-      <td>Model is being evaluated on a limited basis to test feasibility, performance, or business value.</td>
-      <td>Choose this when testing assumptions, performance, or structure without full deployment.</td>
-      <td>
-        <ul style="margin: 0; padding-left: 20px;">
-          <li><strong>Production Deployment Date:</strong> Required</li>
-          <li><strong>Expiration Date:</strong> Required (default: 2 years)</li>
-          <li>Max duration: 2 years</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Prototype</strong></td>
-      <td>Early version of the model with core logic developed, but not yet validated or ready for deployment.</td>
-      <td>Use if the model exists and works in some form but lacks validation, integration, or testing.</td>
-      <td>No dates required.</td>
-    </tr>
-    <tr>
-      <td><strong>Research</strong></td>
-      <td>Experimental models built for academic, exploratory, or foundational analysis, not meant for production.</td>
-      <td>Choose this when building models to explore methods or support internal learning—not deployment.</td>
-      <td>No dates required.</td>
-    </tr>
-    <tr>
-      <td><strong>One-Off Model</strong></td>
-      <td>Used once or infrequently for a specific decision or project and not expected to be maintained.</td>
-      <td>Use if the model was built for a single use case or analysis and won't be updated regularly.</td>
-      <td>
-        <ul style="margin: 0; padding-left: 20px;">
-          <li><strong>Production Deployment Date:</strong> Required</li>
-          <li><strong>Expiration Date:</strong> Required (default: 2 years)</li>
-          <li>Max duration: 2 years</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>Other</strong></td>
-      <td>None of the above applies. Used when the model lifecycle doesn’t fit predefined categories.</td>
-      <td>Include a short explanation in the comments field if you select this option.</td>
-      <td>
-        <ul style="margin: 0; padding-left: 20px;">
-          <li><strong>Production Deployment Date:</strong> Required</li>
-          <li><strong>Expiration Date:</strong> Required (default: 2 years)</li>
-          <li>Max duration: 2 years</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
+<table border="1" cellpadding="6" cellspacing="0" width="100%">
+  <tr>
+    <th>Lifecycle Stage</th>
+    <th>Description</th>
+    <th>Model Owner Guidance</th>
+    <th>Required Dates</th>
+  </tr>
+  <tr>
+    <td><b>Planned (within next 6 months)</b></td>
+    <td>Model is expected to be developed and/or implemented in production within 6 months.</td>
+    <td>Use this if you have funding and intent, but the model is not yet operational.</td>
+    <td>No dates required.</td>
+  </tr>
+  <tr>
+    <td><b>Implemented in Production</b></td>
+    <td>Model is actively used in business operations and influences decisions.</td>
+    <td>Select only if the model is deployed and used in production workflows.</td>
+    <td>
+      Production Deployment Date: Required<br>
+      Expiration Date: Required (default 2 years)<br>
+      Max duration: 2 years
+    </td>
+  </tr>
+  <tr>
+    <td><b>Proof-of-Concept (PoC)</b></td>
+    <td>Model is being tested to validate feasibility or performance.</td>
+    <td>Choose this when running limited evaluation or pilot.</td>
+    <td>
+      Production Deployment Date: Required<br>
+      Expiration Date: Required (default 2 years)<br>
+      Max duration: 2 years
+    </td>
+  </tr>
+  <tr>
+    <td><b>Prototype</b></td>
+    <td>Early version of model not validated or ready for production.</td>
+    <td>Use if model exists but hasn’t been tested or integrated.</td>
+    <td>No dates required.</td>
+  </tr>
+  <tr>
+    <td><b>Research</b></td>
+    <td>Experimental models built for exploration or academic use only.</td>
+    <td>Use for internal experimentation or method testing.</td>
+    <td>No dates required.</td>
+  </tr>
+  <tr>
+    <td><b>One-Off Model</b></td>
+    <td>Model used once or for a specific purpose, not expected to be maintained.</td>
+    <td>Use for non-recurring or single-use analyses.</td>
+    <td>
+      Production Deployment Date: Required<br>
+      Expiration Date: Required (default 2 years)<br>
+      Max duration: 2 years
+    </td>
+  </tr>
+  <tr>
+    <td><b>Other</b></td>
+    <td>Does not fit any predefined category.</td>
+    <td>Include a short explanation in the comments field.</td>
+    <td>
+      Production Deployment Date: Required<br>
+      Expiration Date: Required (default 2 years)<br>
+      Max duration: 2 years
+    </td>
+  </tr>
 </table>
